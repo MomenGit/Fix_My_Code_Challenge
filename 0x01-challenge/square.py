@@ -1,21 +1,22 @@
 #!/usr/bin/python3
+"""Define Square class"""
+
 
 class square():
-
+    """Square Model class"""
     width = 0
     height = 0
 
     def __init__(self, *args, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)
-        if self.width != self.height:
-            self.height = self.width
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.width * self.width
+        return self.width * self.height
 
     def PermiterOfMySquare(self):
+        """ Perimeter of the square """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
